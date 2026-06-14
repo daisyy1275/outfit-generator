@@ -1,7 +1,3 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
 import { useEffect } from 'react'
 import WadrobeForm from './components/WadrobeForm'
@@ -10,8 +6,8 @@ import OccasionSelector from './components/occasionSelector'
 import WeatherDisplay from './components/WeatherDisplay'
 import OutfitDisplay from './components/OutfitDisplay'
 import ViewOutfits from './components/ViewOutfits'
+import { useState } from 'react'
 function App() {
-  const [count, setCount] = useState(0);
   const [weather, updateweather] = useState(null);
   const [chosenFit, updateChosenFit] = useState("");
   const [occasion, updateOccasion] = useState("")
@@ -30,11 +26,11 @@ function App() {
 
   return (
     <>
-      {chosenFit && weather && <OutfitDisplay chosenFit={chosenFit} temp={weather.current_weather.temperature} />}
+      <h1> Outfit Generator </h1>
       <button onClick={() => setShowWeather(true)}>Check Weather 🌤️</button>
+      {chosenFit && weather && <OutfitDisplay chosenFit={chosenFit} temp={weather.current_weather.temperature} />}
       {showWeather && weather && <WeatherDisplay weather={weather} />}
-      <OccasionSelector occasion={occasion} updateOccasion={updateOccasion} />
-      {weather && <button onClick={() => updateChosenFit(generate(occasion, weather.current_weather.temperature))}>Generate Outfit</button>}
+      <OccasionSelector occasion={occasion} updateOccasion={updateOccasion} onGenerate={() => updateChosenFit(generate(occasion, weather.current_weather.temperature))} />
       <div className="ticks"></div>
       <section id="spacer"></section>
       <WadrobeForm />

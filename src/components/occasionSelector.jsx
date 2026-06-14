@@ -1,19 +1,16 @@
-function OccasionSelector({ occasion, updateOccasion }){
-    
+function OccasionSelector({ occasion, updateOccasion, onGenerate}){
     return (
-        <div>
-        
+      <div className="card">
+        <h3>👗 What's the occasion?</h3>
         <select value={occasion} onChange={(e) => updateOccasion(e.target.value)}>
-        <option value="casual">casual</option>
-        <option value="formal">formal</option>
-        <option value="workout">workout</option>
-        <option value="nightout">nightout</option>
+          <option value="casual">Casual</option>
+          <option value="formal">Formal</option>
+          <option value="workout">Workout</option>
+         <option value="nightout">Night Out</option>
         </select>
-        
-        
-
-
-        </div>
-    )
+        <button onClick={onGenerate}>✨ Generate Outfit</button>
+      </div>
+)
+    
 }
 export default OccasionSelector

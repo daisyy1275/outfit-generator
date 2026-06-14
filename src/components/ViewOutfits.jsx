@@ -8,7 +8,7 @@ function ViewOutfits(){
             setSaved([]);
         }
         return (
-            <div>
+            <div className="card">
                 <h2>Saved Outfits</h2>
                 {saved.map((outfit, index) => (
                 <div key={index}>

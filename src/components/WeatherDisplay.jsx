@@ -14,10 +14,11 @@ function weatherDisplay({weather}){
     }
     const message = getMessage(temp)
     return (
-    <div>
-     <h2>{temp}°C</h2>
-     <p>{message}</p>
-    </div>
+     <div className="card">
+       <h3>🌤️ Weather Today</h3>
+       <h2 style={{color: '#c77dff', fontSize: '2rem'}}>{temp}°C</h2>
+       <p>{message}</p>
+     </div>
 )
 }
 export default weatherDisplay
