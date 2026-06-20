@@ -1,7 +1,7 @@
 import SmallModal from './SmallModal';
 import { useState } from 'react'
 import { mixture } from  '../utils/generateOutfit'
-function OutfitDisplay({chosenFit, temp}){
+function OutfitDisplay({chosenFit, temp, onReset}){
     const jacketPreffered = temp < 20;
     const showDress = chosenFit.dress ? true : false;
     const [openModal, setOpenModal] = useState(null);
@@ -24,6 +24,7 @@ function OutfitDisplay({chosenFit, temp}){
         const existing = JSON.parse(localStorage.getItem("savedOutfits")) || [];
         existing.push(finalOutfit);
         localStorage.setItem("savedOutfits", JSON.stringify(existing));
+        onReset();
     }
     return (
   <div className="card">
@@ -70,6 +71,7 @@ function OutfitDisplay({chosenFit, temp}){
     {extraShoes && <div className="outfit-item"><span className="item-label">ALTERNATIVE SHOES</span><p>{extraShoes.cloth}</p></div>}
     <button onClick={handleOutfitSave}>Save this outfit ❤️</button>
     {openModal && <SmallModal category={openModal} onClose={() => setOpenModal(null)} />}
+    <button onClick={onReset}>🔄 Choose another outfit</button>
   </div>
 )
    

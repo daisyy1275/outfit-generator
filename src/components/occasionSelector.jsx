@@ -1,15 +1,15 @@
 function OccasionSelector({ occasion, updateOccasion, onGenerate}){
     return (
       <div className="card">
-        <h3>👗 What's the occasion?</h3>
-        <select value={occasion} onChange={(e) => updateOccasion(e.target.value)}>
-          <option value="casual">Casual</option>
-          <option value="formal">Formal</option>
-          <option value="workout">Workout</option>
-         <option value="nightout">Night Out</option>
-        </select>
-        <button onClick={onGenerate}>✨ Generate Outfit</button>
-      </div>
+        <h3>👗 What's the vibe?</h3>
+        <div style={{display: 'flex', flexWrap: 'wrap', gap: '8px'}}>
+          <button onClick={() => updateOccasion("casual")} className={occasion === "casual" ? "occasion-active" : "occasion-btn"}>Casual</button>
+          <button onClick={() => updateOccasion("formal")} className={occasion === "formal" ? "occasion-active" : "occasion-btn"}>Formal</button>
+          <button onClick={() => updateOccasion("workout")} className={occasion === "workout" ? "occasion-active" : "occasion-btn"}>Workout</button>
+          <button onClick={() => updateOccasion("nightout")} className={occasion === "nightout" ? "occasion-active" : "occasion-btn"}>Night Out</button>
+       </div>
+       <button onClick={onGenerate} style={{width: '100%', marginTop: '16px', fontSize: '16px', padding: '14px'}}>✨ Generate my outfit</button>
+     </div>
 )
     
 }

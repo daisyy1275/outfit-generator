@@ -95,3 +95,27 @@ select {
   color: #c77dff;
   display: block;
 }
+
+h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  font-style: italic;
+  color: #7b2d8b;
+  text-align: center;
+  font-family: Georgia, serif;
+}
+.occasion-btn {
+  background: white;
+  color: #c77dff;
+  border: 2px solid #e8c5f7;
+}
+
+.occasion-active {
+  background: linear-gradient(135deg, #ff8fab, #c77dff);
+  color: white;
+  border: none;
+}
+.occasion-btn:hover {
+  background: linear-gradient(135deg, #ff8fab, #c77dff);
+  color: white;
+}
