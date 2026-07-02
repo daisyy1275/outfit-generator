@@ -17,7 +17,8 @@ function OutfitDisplay({chosenFit, temp, onReset}){
             bottom: chosenFit.bottom || extraBottom,
             shoes: chosenFit.shoes || extraShoes,
             dress: chosenFit.dress,
-            jacket: chosenFit.jacket
+            jacket: chosenFit.jacket,
+            occasion: chosenFit.top?.occasion || chosenFit.bottom?.occasion || chosenFit.shoes?.occasion
         };
         
         

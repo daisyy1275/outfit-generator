@@ -3,9 +3,9 @@ import {useState} from 'react'
 
 function WadrobeForm(){
     const [cloth, updateCloth] = useState("");
-    const [category, updateCategory] = useState("");
-    const [occasion, updateOccasion] = useState("");
-    const [temp, updateTemp] = useState("");
+    const [category, updateCategory] = useState("top");
+    const [occasion, updateOccasion] = useState("casual");
+    const [temp, updateTemp] = useState("cold");
 
     function handleClick(){
         const clothes = {cloth, category, occasion, temp}
