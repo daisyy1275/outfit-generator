@@ -1,4 +1,5 @@
-#Outfit Generator
+# Outfit Generator
+
 weather based outfit generator built with react, input you're clothing pieces and it give you and outfit based on the vibe you are going for.
 
 #How it works
@@ -18,9 +19,9 @@ weather based outfit generator built with react, input you're clothing pieces an
   -  localStorage — persists wardrobe and saved outfits
  
 #  How to run locally
-git clone https://github.com/daisyy1275/outfit-generator
-cd outfit_generator
-npm install
-npm run dev
+- git clone https://github.com/daisyy1275/outfit-generator
+- cd outfit_generator
+- npm install
+- npm run dev
 
     
