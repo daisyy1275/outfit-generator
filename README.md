@@ -17,7 +17,11 @@ weather based outfit generator built with react, input you're clothing pieces an
   - Open-Meteo API - weather data
   - Browser Geolocation API — auto-detects your location
   -  localStorage — persists wardrobe and saved outfits
- 
+
+# Live demo
+https://outfit-generator-three.vercel.app/
+
+
 #  How to run locally
 - git clone https://github.com/daisyy1275/outfit-generator
 - cd outfit_generator
