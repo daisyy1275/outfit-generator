@@ -18,7 +18,7 @@ function WadrobeForm(){
     return (
   <div className="card" id="wardrobe">
     <h3>👚 Add to Wardrobe</h3>
-    <div style={{display: 'flex', flexWrap: 'nowrap', alignItems: 'center', gap: '8px'}}>
+    <div style={{display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '8px'}}>
       <input value={cloth} onChange={(e) => updateCloth(e.target.value)} placeholder="Item name..." />
       <select value={category} onChange={(e) => updateCategory(e.target.value)}>
         <option value="top">Top</option>
